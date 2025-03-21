@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Polling System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Blockchain Polling System</h1>
+        </header>
+        <main>
+            <section id="poll-section" class="card">
+                <h2>Create a New Poll</h2>
+                <input type="text" id="poll-question" placeholder="Enter your poll question" class="input-box">
+                <button class="btn primary" onclick="createPoll()">Create Poll</button>
+            </section>
+            <section id="vote-section" class="card">
+                <h2>Active Poll</h2>
+                <p id="current-question" class="question">No active poll</p>
+                <div class="options">
+                    <button class="btn vote" onclick="vote(0)">Option 1</button>
+                    <button class="btn vote" onclick="vote(1)">Option 2</button>
+                </div>
+            </section>
+            <section id="result-section" class="card">
+                <h2>Poll Results</h2>
+                <p id="result" class="result">No results yet</p>
+                <button class="btn result-btn" onclick="getResults()">Show Results</button>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
